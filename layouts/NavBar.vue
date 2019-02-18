@@ -1,6 +1,5 @@
 <template>
   <nav class="nav-bar">
-    <nuxt/>
     <ScrollPane class="nav-bar-scroll">
       <router-link
         :to="v.path"

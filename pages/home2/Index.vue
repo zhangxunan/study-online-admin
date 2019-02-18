@@ -111,7 +111,7 @@
 
 <script>
 export default {
-  layout: 'app',
+  layout: 'home',
   data() {
     return {
       radio: '',

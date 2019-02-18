@@ -41,7 +41,7 @@
       <pre>您已经登录</pre>
       <el-button @click="logout">重新登录</el-button>
       <el-button @click="link2Home">进入首页</el-button>
-      <NuxtLink to="/home2">进入首页</NuxtLink>
+      <NuxtLink to="/home2/index">进入首页</NuxtLink>
     </div>
   </div>
 </template>

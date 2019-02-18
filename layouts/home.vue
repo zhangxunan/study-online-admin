@@ -140,8 +140,9 @@
           class="main-container"
         >
           <!--<transition name="fade">-->
-          <!-- <router-view></router-view> -->
+          <!-- <router-view> -->
           <nuxt/>
+          <!-- </router-view> -->
           <!--</transition>-->
         </div>
         <EuiFooter></EuiFooter>
