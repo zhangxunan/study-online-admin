@@ -1,33 +1,48 @@
 <template>
   <div class="container">
-    <h1>Please login to see the secret content</h1>
+    <h1>在线学习平台</h1>
     <form v-if="!$store.state.authUser" @submit.prevent="login">
       <p v-if="formError" class="error">{{ formError }}</p>
       <p>
-        <i>To login, use
+        <i>
+          To login, use
           <b>demo</b> as username and
           <b>demo</b> as password.
         </i>
       </p>
       <p>Username:
-        <input v-model="formUsername" type="text" name="username">
+        <el-input
+          name="username"
+          v-model="formUsername"
+          type="text"
+          placeholder="用户名"
+          prefix-icon="el-icon-info"
+          clearable
+          autocomplete="on"
+          size="small"
+        ></el-input>
       </p>
       <p>Password:
-        <input v-model="formPassword" type="password" name="password">
+        <el-input
+          name="password"
+          v-model="formPassword"
+          type="password"
+          placeholder="密码"
+          prefix-icon="el-icon-info"
+          clearable
+          autocomplete="on"
+          size="small"
+        ></el-input>
       </p>
-      <button type="submit">Login</button>
+      <el-button @click="login">登录</el-button>
     </form>
     <div v-else>
       Hello {{ $store.state.authUser.username }}!
-      <pre>I am the secret content, I am shown only when the use is connected.</pre>
-      <p>
-        <i>You can also refresh this page, you'll still be connected!</i>
-      </p>
-      <button @click="logout">Logout</button>
+      <pre>您已经登录</pre>
+      <el-button @click="logout">重新登录</el-button>
+      <el-button @click="link2Home">进入首页</el-button>
+      <NuxtLink to="/home">进入首页</NuxtLink>
     </div>
-    <p>
-      <NuxtLink to="/secret">Super secret page</NuxtLink>
-    </p>
   </div>
 </template>
 
@@ -36,8 +51,8 @@ export default {
   data() {
     return {
       formError: null,
-      formUsername: '',
-      formPassword: ''
+      formUsername: 'demo',
+      formPassword: 'demo'
     }
   },
   methods: {
@@ -60,6 +75,9 @@ export default {
       } catch (e) {
         this.formError = e.message
       }
+    },
+    link2Home() {
+      this.$router.push('/home')
     }
   }
 }
