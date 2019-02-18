@@ -229,9 +229,18 @@ export default {
       document.body.classList.toggle('sidebar-close')
       this.NavBarWidth()
     },
-    logout() {
+    logout2() {
       sessionStorage.removeItem(this.$Config.tokenKey)
       this.$router.push({ path: '/login' })
+    },
+    async logout() {
+      try {
+        await this.$store.dispatch('logout')
+        sessionStorage.removeItem(this.$Config.tokenKey)
+        this.$router.push('/login')
+      } catch (e) {
+        this.formError = e.message
+      }
     },
     handleOpen(key, keyPath) {
       // console.log(key, keyPath);
