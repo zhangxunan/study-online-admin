@@ -12,8 +12,8 @@
       </p>
       <p>Username:
         <el-input
-          name="username"
           v-model="formUsername"
+          name="username"
           type="text"
           placeholder="用户名"
           prefix-icon="el-icon-info"
@@ -24,8 +24,8 @@
       </p>
       <p>Password:
         <el-input
-          name="password"
           v-model="formPassword"
+          name="password"
           type="password"
           placeholder="密码"
           prefix-icon="el-icon-info"
@@ -41,7 +41,7 @@
       <pre>您已经登录</pre>
       <el-button @click="logout">重新登录</el-button>
       <el-button @click="link2Home">进入首页</el-button>
-      <NuxtLink to="/home">进入首页</NuxtLink>
+      <NuxtLink to="/home2">进入首页</NuxtLink>
     </div>
   </div>
 </template>
@@ -77,7 +77,7 @@ export default {
       }
     },
     link2Home() {
-      this.$router.push('/home')
+      this.$router.push('/home2')
     }
   }
 }
