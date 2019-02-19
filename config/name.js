@@ -1,5 +1,5 @@
 export default {
-  siteName: 'Element UI Admin模板',
+  siteName: '在线学习后台',
   minSiteMame: 'EUI',
   tokenKey: 'Authorization', // 存在sessionStorage里面的tokenKey
   postStatus: {
