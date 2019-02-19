@@ -24,6 +24,7 @@
       <el-button
         type="primary"
         :loading="loginLoading"
+        :plain="true"
         style="width: 100%;margin-bottom: 18px"
         @click.native="login"
       >登录</el-button>
@@ -46,7 +47,28 @@ export default {
     }
   },
   methods: {
-    login() {
+    async login() {
+      const APP = this
+      APP.loginLoading = true
+      try {
+        await APP.$store.dispatch('login', {
+          username: APP.userNmae,
+          password: APP.password
+        })
+        APP.userNmae = ''
+        APP.password = ''
+        APP.$router.push({ path: '/home2' })
+      } catch (e) {
+        APP.$message({
+          showClose: true,
+          message: e.message,
+          type: 'error'
+        })
+      } finally {
+        APP.loginLoading = false
+      }
+    },
+    login2() {
       const APP = this
       APP.loginLoading = true
       setTimeout(() => {
@@ -57,7 +79,7 @@ export default {
           type: 'success'
         })
         APP.loginLoading = false
-        APP.$router.push({ path: '/home' })
+        APP.$router.push({ path: '/home2' })
       }, 1000)
     }
   }

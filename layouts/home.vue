@@ -72,7 +72,7 @@
         </span>
         <el-dropdown>
           <span class="header-btn">
-            Admin
+            {{$store.state.authUser.username}}
             <i class="el-icon-arrow-down el-icon--right"></i>
           </span>
           <el-dropdown-menu slot="dropdown">
