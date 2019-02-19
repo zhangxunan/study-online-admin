@@ -14,21 +14,21 @@ menu.home = {
  * 字体图标
  * @type {{name: string, icon: string, children: {}}}
  */
-menu.font_icon = {
-  name: '字体图标',
-  icon: 'fa fa-th',
-  children: {}
-}
-const icon = menu.font_icon.children
+// menu.font_icon = {
+//   name: '字体图标',
+//   icon: 'fa fa-th',
+//   children: {}
+// }
+// const icon = menu.font_icon.children
 
-icon.font_awesome = {
-  name: 'FontAwesome 4.7',
-  path: '/font_awesome'
-}
-icon.element_icon = {
-  name: 'ElementIcon',
-  path: '/element_icon'
-}
+// icon.font_awesome = {
+//   name: 'FontAwesome 4.7',
+//   path: '/font_awesome'
+// }
+// icon.element_icon = {
+//   name: 'ElementIcon',
+//   path: '/element_icon'
+// }
 
 /**
  * 内容管理
@@ -44,7 +44,7 @@ const ContentManage = menu.content_manage.children
 
 ContentManage.post = {
   name: '文章管理',
-  path: '/post_manage'
+  path: '/contentManage'
 }
 
 /**
@@ -60,7 +60,7 @@ const UserManage = menu.user_manage.children
 
 UserManage.user = {
   name: '用户列表',
-  path: '/user_manage'
+  path: '/userManage'
 }
 
 /**
@@ -76,7 +76,7 @@ const CategoryManage = menu.category_manage.children
 
 CategoryManage.category = {
   name: '分类列表',
-  path: '/category_manage'
+  path: '/categoryManage'
 }
 
 menu.permission_manage = {
@@ -88,12 +88,12 @@ const PermissionManage = menu.permission_manage.children
 
 PermissionManage.role = {
   name: '角色管理',
-  path: '/role_manage'
+  path: '/permissionManage/role'
 }
 
 PermissionManage.permission = {
   name: '权限列表',
-  path: '/permission_list'
+  path: '/permissionManage/permission'
 }
 
 export default menu

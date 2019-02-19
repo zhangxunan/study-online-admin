@@ -49,6 +49,7 @@ module.exports = {
   //css: ['element-ui/lib/theme-chalk/index.css'],
   css: [
     '@/assets/theme/element-admin/index.css',
+    // '@/assets/theme/element-00c4fd/index.css',
     '@/assets/css/font-awesome.min.css',
     '@/assets/css/style.css'
   ],
