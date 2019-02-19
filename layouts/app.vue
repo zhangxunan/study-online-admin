@@ -23,7 +23,7 @@
             <div style="padding: 10px;text-align: center;width: 420px">
               <div class="setting-category">
                 <el-switch
-                  @change="saveSwitchTabBarVal"
+                  @change="saveSwitchTabBarVaAppl"
                   v-model="switchTabBar"
                   active-text="开启TabBar"
                   inactive-text="关闭TabBar"

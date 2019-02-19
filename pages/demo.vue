@@ -11,7 +11,6 @@
 </template>
 <script>
 export default {
-  middleware: 'auth',
   methods: {
     async logout() {
       try {

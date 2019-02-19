@@ -1,6 +1,6 @@
 export default {
   siteName: '在线学习后台',
-  minSiteMame: 'EUI',
+  minSiteMame: 'SOL',
   tokenKey: 'Authorization', // 存在sessionStorage里面的tokenKey
   postStatus: {
     draft: '草稿',

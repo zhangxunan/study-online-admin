@@ -6,7 +6,7 @@ const menu = {}
  */
 menu.home = {
   name: '首页',
-  path: '/',
+  path: '/home',
   icon: 'fa fa-tachometer'
 }
 

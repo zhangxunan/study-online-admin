@@ -21,7 +21,7 @@ export const actions = {
     try {
       const { data } = await axios.post('/api/login', { username, password })
       commit('SET_USER', data)
-      this.$router.push('/home')
+      // this.$router.push('/home')
     } catch (error) {
       if (error.response && error.response.status === 401) {
         throw new Error('Bad credentials')

@@ -40,8 +40,8 @@
 export default {
   data() {
     return {
-      userNmae: '',
-      password: '',
+      userNmae: 'demo',
+      password: 'demo',
       Remenber: true,
       loginLoading: false
     }
@@ -55,9 +55,14 @@ export default {
           username: APP.userNmae,
           password: APP.password
         })
-        APP.userNmae = ''
-        APP.password = ''
-        APP.$router.push({ path: '/home2' })
+        // APP.userNmae = ''
+        // APP.password = ''
+        APP.$notify({
+          title: '登录成功',
+          message: '很高兴你使用在线学习系统！别忘了给个好评哦。',
+          type: 'success'
+        })
+        APP.$router.push({ path: '/home' })
       } catch (e) {
         APP.$message({
           showClose: true,
@@ -79,7 +84,7 @@ export default {
           type: 'success'
         })
         APP.loginLoading = false
-        APP.$router.push({ path: '/home2' })
+        APP.$router.push({ path: '/home' })
       }, 1000)
     }
   }

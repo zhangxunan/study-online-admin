@@ -111,7 +111,7 @@
 
 <script>
 export default {
-  layout: 'home',
+  layout: 'app',
   middleware: 'auth',
   data() {
     return {
