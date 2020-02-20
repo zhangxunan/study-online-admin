@@ -63,6 +63,11 @@ UserManage.user = {
   path: '/userManage'
 }
 
+UserManage.user2 = {
+  name: '用户列表2',
+  path: '/users'
+}
+
 /**
  * 分类管理
  * @type {{name: string, icon: string, children: {}}}
