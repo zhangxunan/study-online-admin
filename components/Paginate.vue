@@ -42,10 +42,10 @@ export default {
   },
   methods: {
     paginate: function() {
-      let params = this.params
+      const params = this.params
       params.pageSize = this.$Config.pageSize
       params.pageCode = this.current
-      let thisApp = this
+      const thisApp = this
 
       thisApp.$Api[thisApp.api](params, function(data) {
         thisApp.total = data.total
